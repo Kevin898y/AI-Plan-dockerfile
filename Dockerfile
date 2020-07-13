@@ -9,7 +9,8 @@ RUN pip3 --no-cache-dir install django \
 	selenium\
 	&& apt-get install -y wget\
 	&& wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb\
-	&& apt-get install -y ./google-chrome-stable_current_amd64.deb
+	&& apt-get install -y ./google-chrome-stable_current_amd64.deb\
+	&& rm google-chrome-stable_current_amd64.deb
 	
 RUN pip3 --no-cache-dir install gensim \
 	tensorflow-gpu==1.14.0\
